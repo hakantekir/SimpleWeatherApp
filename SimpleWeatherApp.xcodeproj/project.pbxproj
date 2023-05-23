@@ -60,13 +60,13 @@
 		A2034CB52A1CC5FB00C29440 /* SimpleWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				A2034CC42A1CC5FC00C29440 /* Info.plist */,
 				A2034CCE2A1CF7CC00C29440 /* App */,
 				A2034CCF2A1CF8FA00C29440 /* Services */,
 				A2034CBA2A1CC5FB00C29440 /* ViewController.swift */,
 				A2034CBC2A1CC5FB00C29440 /* Main.storyboard */,
 				A2034CBF2A1CC5FC00C29440 /* Assets.xcassets */,
 				A2034CC12A1CC5FC00C29440 /* LaunchScreen.storyboard */,
+				A2034CC42A1CC5FC00C29440 /* Info.plist */,
 			);
 			path = SimpleWeatherApp;
 			sourceTree = "<group>";
