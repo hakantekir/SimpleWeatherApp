@@ -66,6 +66,7 @@
 				A2034CBC2A1CC5FB00C29440 /* Main.storyboard */,
 				A2034CBF2A1CC5FC00C29440 /* Assets.xcassets */,
 				A2034CC12A1CC5FC00C29440 /* LaunchScreen.storyboard */,
+				A2034CC42A1CC5FC00C29440 /* Info.plist */,
 			);
 			path = SimpleWeatherApp;
 			sourceTree = "<group>";
@@ -75,7 +76,6 @@
 			children = (
 				A2034CB62A1CC5FB00C29440 /* AppDelegate.swift */,
 				A2034CB82A1CC5FB00C29440 /* SceneDelegate.swift */,
-				A2034CC42A1CC5FC00C29440 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
