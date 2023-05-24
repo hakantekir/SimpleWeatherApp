@@ -20,16 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = window
         
-        let viewController = CitiesView()
-        let presenter = CitiesPresenter()
-        let interactor = CitiesInteractor()
+        let citiesView = CitiesRouter.createModule()
         
-        presenter.view = viewController
-        presenter.interactor = interactor
-        
-        viewController.presenter = presenter
-        
-        window.rootViewController = viewController
+        window.rootViewController = citiesView
         window.makeKeyAndVisible()
     }
 
