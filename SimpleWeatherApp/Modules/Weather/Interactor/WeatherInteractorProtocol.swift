@@ -8,5 +8,5 @@
 import Foundation
 
 protocol WeatherInteractorProtocol {
-    
+    func fetchWeather(cityID: Int, completition: @escaping (Result<Weather, Error>) -> Void)
 }

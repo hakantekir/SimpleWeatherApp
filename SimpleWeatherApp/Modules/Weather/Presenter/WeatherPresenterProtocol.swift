@@ -8,5 +8,5 @@
 import Foundation
 
 protocol WeatherPresenterProtocol {
-    
+    func fetchWeather(cityId: Int)
 }

@@ -8,5 +8,7 @@
 import Foundation
 
 protocol WeatherViewProtocol: AnyObject {
-    
+    var weather: Weather? { get set }
+    var city: City? { get set }
+    func updateWeatherLabels()
 }
