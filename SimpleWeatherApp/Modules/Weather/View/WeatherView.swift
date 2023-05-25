@@ -8,7 +8,8 @@
 import UIKit
 import SnapKit
 
-class WeatherView: UIViewController {
+class WeatherView: UIViewController, WeatherViewProtocol {
+    var presenter: WeatherPresenter?
     
     override func viewDidLoad() {
         

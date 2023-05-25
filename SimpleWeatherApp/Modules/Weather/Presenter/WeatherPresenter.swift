@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class WeatherPresenter: WeatherPresenterProtocol {
+    weak var view: WeatherViewProtocol?
+    var interactor: WeatherInteractorProtocol?
+    var router: WeatherRouterProtocol?
+}

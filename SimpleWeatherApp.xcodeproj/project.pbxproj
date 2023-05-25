@@ -29,6 +29,10 @@
 		A2CB15282A1E96DC00D199B7 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB15272A1E96DC00D199B7 /* WeatherPresenter.swift */; };
 		A2CB152A2A1E96E900D199B7 /* WeatherEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB15292A1E96E900D199B7 /* WeatherEntity.swift */; };
 		A2CB152C2A1E96F300D199B7 /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB152B2A1E96F300D199B7 /* WeatherRouter.swift */; };
+		A2CB152E2A1FA6B600D199B7 /* WeatherViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB152D2A1FA6B600D199B7 /* WeatherViewProtocol.swift */; };
+		A2CB15302A1FA6C300D199B7 /* WeatherInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB152F2A1FA6C300D199B7 /* WeatherInteractorProtocol.swift */; };
+		A2CB15322A1FA6D000D199B7 /* WeatherPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB15312A1FA6D000D199B7 /* WeatherPresenterProtocol.swift */; };
+		A2CB15342A1FA6DF00D199B7 /* WeatherRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CB15332A1FA6DF00D199B7 /* WeatherRouterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		A2CB15272A1E96DC00D199B7 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
 		A2CB15292A1E96E900D199B7 /* WeatherEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntity.swift; sourceTree = "<group>"; };
 		A2CB152B2A1E96F300D199B7 /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
+		A2CB152D2A1FA6B600D199B7 /* WeatherViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewProtocol.swift; sourceTree = "<group>"; };
+		A2CB152F2A1FA6C300D199B7 /* WeatherInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInteractorProtocol.swift; sourceTree = "<group>"; };
+		A2CB15312A1FA6D000D199B7 /* WeatherPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenterProtocol.swift; sourceTree = "<group>"; };
+		A2CB15332A1FA6DF00D199B7 /* WeatherRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CB152B2A1E96F300D199B7 /* WeatherRouter.swift */,
+				A2CB15332A1FA6DF00D199B7 /* WeatherRouterProtocol.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CB15272A1E96DC00D199B7 /* WeatherPresenter.swift */,
+				A2CB15312A1FA6D000D199B7 /* WeatherPresenterProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -237,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CB15252A1E96D200D199B7 /* WeatherInteractor.swift */,
+				A2CB152F2A1FA6C300D199B7 /* WeatherInteractorProtocol.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CB15232A1E95F100D199B7 /* WeatherView.swift */,
+				A2CB152D2A1FA6B600D199B7 /* WeatherViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,13 +346,17 @@
 				A2CB152C2A1E96F300D199B7 /* WeatherRouter.swift in Sources */,
 				A2034CD22A1CF91600C29440 /* NetworkManager.swift in Sources */,
 				A2034CBB2A1CC5FB00C29440 /* CitiesView.swift in Sources */,
+				A2CB15342A1FA6DF00D199B7 /* WeatherRouterProtocol.swift in Sources */,
 				A2CB15242A1E95F100D199B7 /* WeatherView.swift in Sources */,
 				A2611DAC2A1E030C00F53966 /* CitiesInteractorProtocol.swift in Sources */,
+				A2CB15302A1FA6C300D199B7 /* WeatherInteractorProtocol.swift in Sources */,
 				A2611DAE2A1E031600F53966 /* CitiesInteractor.swift in Sources */,
 				A2611DB42A1E034B00F53966 /* CityEntity.swift in Sources */,
 				A2034CB72A1CC5FB00C29440 /* AppDelegate.swift in Sources */,
 				A2CB15282A1E96DC00D199B7 /* WeatherPresenter.swift in Sources */,
 				A2CB152A2A1E96E900D199B7 /* WeatherEntity.swift in Sources */,
+				A2CB152E2A1FA6B600D199B7 /* WeatherViewProtocol.swift in Sources */,
+				A2CB15322A1FA6D000D199B7 /* WeatherPresenterProtocol.swift in Sources */,
 				A2611DB02A1E032C00F53966 /* CitiesRouter.swift in Sources */,
 				A2034CB92A1CC5FB00C29440 /* SceneDelegate.swift in Sources */,
 				A2611DB22A1E033700F53966 /* CitiesRouterProtocol.swift in Sources */,
