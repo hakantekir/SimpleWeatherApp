@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBarVC = UITabBarController()
         
+        citiesView.presenter?.router?.tabBarVC = tabBarVC
         tabBarVC.setViewControllers([weatherView, citiesView], animated: true)
         
         window.rootViewController = tabBarVC

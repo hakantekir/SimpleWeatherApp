@@ -8,5 +8,8 @@
 import UIKit
 
 protocol CitiesRouterProtocol {
-    static func createModule() -> UIViewController
+    var tabBarVC: UITabBarController? { get set }
+    
+    static func createModule() -> CitiesView
+    func showWeatherView()
 }

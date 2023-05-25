@@ -9,8 +9,9 @@ import UIKit
 
 class CitiesRouter: CitiesRouterProtocol {
     weak var view: UIViewController?
+    weak var tabBarVC: UITabBarController?
     
-    static func createModule() -> UIViewController {
+    static func createModule() -> CitiesView {
         let view = CitiesView()
         let interactor = CitiesInteractor()
         let presenter = CitiesPresenter()
@@ -25,5 +26,13 @@ class CitiesRouter: CitiesRouterProtocol {
         view.title = "Cities"
         view.tabBarItem.image = UIImage(systemName: "map.circle")
         return view
+    }
+    
+    func showWeatherView() {
+        guard let tabBarVC = tabBarVC else {
+            return
+        }
+        
+        tabBarVC.selectedIndex = 0
     }
 }

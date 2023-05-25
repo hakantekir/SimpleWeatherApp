@@ -16,6 +16,10 @@ class CitiesPresenter: CitiesPresenterProtocol {
         fetchCities()
     }
     
+    func userDidSelect(city: City) {
+        router?.showWeatherView()
+    }
+    
     private func fetchCities() {
         interactor?.fetchCities { [weak self] result in
             DispatchQueue.main.async {

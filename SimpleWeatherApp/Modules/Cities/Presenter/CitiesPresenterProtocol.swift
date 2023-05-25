@@ -8,5 +8,8 @@
 import Foundation
 
 protocol CitiesPresenterProtocol {
+    var router: CitiesRouterProtocol? { get set }
+    
     func viewDidLoad()
+    func userDidSelect(city: City)
 }

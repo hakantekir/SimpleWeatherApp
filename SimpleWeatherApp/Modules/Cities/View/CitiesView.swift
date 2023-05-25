@@ -83,4 +83,8 @@ extension CitiesView: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = cities[indexPath.row].name
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.userDidSelect(city: cities[indexPath.row])
+    }
 }
