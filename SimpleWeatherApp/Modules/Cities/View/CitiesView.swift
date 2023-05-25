@@ -43,7 +43,7 @@ class CitiesView: UIViewController, CitiesViewProtocol {
         presenter?.viewDidLoad()
     }
     
-    func setupUI() {
+    private func setupUI() {
         view.addSubview(searchBar)
         view.addSubview(segmentedControl)
         view.addSubview(tableView)
