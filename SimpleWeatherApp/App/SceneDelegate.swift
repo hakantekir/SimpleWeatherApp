@@ -21,8 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         
         let citiesView = CitiesRouter.createModule()
+        let weatherView = WeatherRouter.createModule()
         
-        window.rootViewController = citiesView
+        let tabBarVC = UITabBarController()
+        
+        tabBarVC.setViewControllers([weatherView, citiesView], animated: true)
+        
+        window.rootViewController = tabBarVC
         window.makeKeyAndVisible()
     }
 

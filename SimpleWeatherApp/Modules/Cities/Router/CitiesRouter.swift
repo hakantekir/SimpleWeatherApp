@@ -22,6 +22,8 @@ class CitiesRouter: CitiesRouterProtocol {
         presenter.router = router
         router.view = view
         
+        view.title = "Cities"
+        view.tabBarItem.image = UIImage(systemName: "map.circle")
         return view
     }
 }

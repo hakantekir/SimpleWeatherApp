@@ -22,6 +22,8 @@ class WeatherRouter: WeatherRouterProtocol {
         presenter.router = router
         router.view = view
         
+        view.title = "Weather"
+        view.tabBarItem.image = UIImage(systemName: "cloud.circle")
         return view
     }
 }
