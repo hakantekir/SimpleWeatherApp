@@ -10,7 +10,7 @@ import UIKit
 class WeatherRouter: WeatherRouterProtocol {
     weak var view: UIViewController?
     
-    static func createModule() -> UIViewController {
+    static func createModule() -> WeatherView {
         let view = WeatherView()
         let interactor = WeatherInteractor()
         let presenter = WeatherPresenter()

@@ -28,9 +28,14 @@ class CitiesRouter: CitiesRouterProtocol {
         return view
     }
     
-    func showWeatherView() {
+    func showWeatherView(with city: City) {
         guard let tabBarVC = tabBarVC else {
             return
+        }
+        
+        if let weatherView = tabBarVC.viewControllers?.first as? WeatherView {
+            weatherView.city = city
+            weatherView.updateCityLabel()
         }
         
         tabBarVC.selectedIndex = 0

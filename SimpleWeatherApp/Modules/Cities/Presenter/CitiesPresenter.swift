@@ -17,7 +17,7 @@ class CitiesPresenter: CitiesPresenterProtocol {
     }
     
     func userDidSelect(city: City) {
-        router?.showWeatherView()
+        router?.showWeatherView(with: city)
     }
     
     private func fetchCities() {
