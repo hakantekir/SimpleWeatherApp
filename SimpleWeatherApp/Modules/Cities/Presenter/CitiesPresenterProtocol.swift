@@ -11,5 +11,6 @@ protocol CitiesPresenterProtocol {
     var router: CitiesRouterProtocol? { get set }
     
     func viewDidLoad()
+    func filterCities(withQuery query: String) 
     func userDidSelect(city: City)
 }
