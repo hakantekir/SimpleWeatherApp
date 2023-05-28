@@ -137,6 +137,21 @@ class WeatherView: UIViewController, WeatherViewProtocol {
         return descriptionLabel
     }()
     
+    let popupView: UIView = {
+        let popupView = UILabel()
+        popupView.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        popupView.layer.cornerRadius = 10
+        return popupView
+    }()
+    
+    let messageLabel: UILabel = {
+        let messageLabel = UILabel()
+        messageLabel.text = "Please select a city"
+        messageLabel.textColor = .white
+        messageLabel.textAlignment = .center
+        return messageLabel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -151,8 +166,10 @@ class WeatherView: UIViewController, WeatherViewProtocol {
     
     func updateCityLabel() {
         guard let city = city else {
+            showCitySelectionPopup()
             return
         }
+        popupView.isHidden = true
         cityLabel.text = city.name
         presenter?.fetchWeather(cityId: city.id)
     }
@@ -187,6 +204,11 @@ class WeatherView: UIViewController, WeatherViewProtocol {
         
         descriptionLabel.text = weather.weather?[0].description?.capitalized
     }
+    
+    func showCitySelectionPopup() {
+        popupView.isHidden = false
+    }
+
     
     private func setupUI() {
         view.addSubview(headerView)
@@ -338,6 +360,19 @@ class WeatherView: UIViewController, WeatherViewProtocol {
         descriptionLabel.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.centerX.equalToSuperview()
+        }
+        
+        view.addSubview(popupView)
+        popupView.addSubview(messageLabel)
+        
+        popupView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(200)
+            make.height.equalTo(100)
+        }
+        messageLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.left.right.equalToSuperview().inset(20)
         }
     }
 }
