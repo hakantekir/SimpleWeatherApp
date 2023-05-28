@@ -137,6 +137,12 @@ class WeatherView: UIViewController, WeatherViewProtocol {
         return descriptionLabel
     }()
     
+    let blurView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        return blurView
+    }()
+    
     let popupView: UIView = {
         let popupView = UILabel()
         popupView.backgroundColor = UIColor(white: 0, alpha: 0.7)
@@ -166,10 +172,10 @@ class WeatherView: UIViewController, WeatherViewProtocol {
     
     func updateCityLabel() {
         guard let city = city else {
-            showCitySelectionPopup()
             return
         }
-        popupView.isHidden = true
+        popupView.removeFromSuperview()
+        blurView.removeFromSuperview()
         cityLabel.text = city.name
         presenter?.fetchWeather(cityId: city.id)
     }
@@ -204,11 +210,6 @@ class WeatherView: UIViewController, WeatherViewProtocol {
         
         descriptionLabel.text = weather.weather?[0].description?.capitalized
     }
-    
-    func showCitySelectionPopup() {
-        popupView.isHidden = false
-    }
-
     
     private func setupUI() {
         view.addSubview(headerView)
@@ -361,6 +362,9 @@ class WeatherView: UIViewController, WeatherViewProtocol {
             make.centerY.equalToSuperview()
             make.centerX.equalToSuperview()
         }
+        
+        blurView.frame = view.bounds
+        view.addSubview(blurView)
         
         view.addSubview(popupView)
         popupView.addSubview(messageLabel)
