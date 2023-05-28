@@ -33,4 +33,11 @@ class CitiesPresenter: CitiesPresenterProtocol {
             }
         }
     }
+    
+    func filterCities(withQuery query: String) {
+        let cities = interactor?.filterCities(withQuery: query) ?? []
+        DispatchQueue.main.async { [weak self] in
+            self?.view?.displayCities(cities)
+        }
+    }
 }

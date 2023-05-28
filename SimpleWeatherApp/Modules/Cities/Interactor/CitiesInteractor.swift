@@ -29,6 +29,9 @@ class CitiesInteractor: CitiesInteractorProtocol {
     }
     
     func filterCities(withQuery query: String) -> [City] {
+        if query == "" {
+            return allCities
+        }
         let lowercaseQuery = query.lowercased()
         let filteredCities = allCities.filter { city in
             return city.name.lowercased().contains(lowercaseQuery)

@@ -15,6 +15,7 @@ class CitiesView: UIViewController, CitiesViewProtocol {
     private var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "City"
+        searchBar.isEnabled = false
         return searchBar
     }()
     
@@ -37,6 +38,7 @@ class CitiesView: UIViewController, CitiesViewProtocol {
         
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
         
         setupUI()
         
@@ -69,6 +71,7 @@ class CitiesView: UIViewController, CitiesViewProtocol {
     
     func displayCities(_ cities: [City]) {
         self.cities = cities
+        searchBar.isEnabled = true
         tableView.reloadData()
     }
 }
@@ -86,5 +89,11 @@ extension CitiesView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.userDidSelect(city: cities[indexPath.row])
+    }
+}
+
+extension CitiesView: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.filterCities(withQuery: searchText)
     }
 }
